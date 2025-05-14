@@ -66,7 +66,7 @@ export class ListaMaterialesComponent {
 
   verDetallesMaterial(id: number) {
     this.route.navigate(['details_material', id]);
-
+    
   }
 
 

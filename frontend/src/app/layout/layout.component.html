@@ -33,7 +33,11 @@
                   </a>
                   
                  
-    
+       <a class="nav-link text-dark" *ngIf="user.roles[0].roleEnum == 'ADMIN'" routerLink="/list_materiales" routerLinkActive="active">
+                    <i class="material-symbols-rounded opacity-5">person</i>
+                    <span class="nav-link-text ms-1">VER Materiales</span>
+                  </a>
+                  
              
              
               <li class="nav-item">

@@ -24,6 +24,7 @@ import { ListaMaterialesComponent } from './lista-materiales/lista-materiales.co
 import { AgregarMaterialesComponent } from './agregar-materiales/agregar-materiales.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ActualizarMaterialesComponent } from './actualizar-materiales/actualizar-materiales.component';
+import { MaterialDetalleComponent } from './material-detalle/material-detalle.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { ActualizarMaterialesComponent } from './actualizar-materiales/actualiza
     ListaMaterialesComponent,
     AgregarMaterialesComponent,
     ActualizarMaterialesComponent,
+    MaterialDetalleComponent,
   ],
   imports: [
     NgxPaginationModule,

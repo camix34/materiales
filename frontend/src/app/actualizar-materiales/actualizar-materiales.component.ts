@@ -112,4 +112,9 @@ obtenerMaterial(id: number): void {
   });
 }
 
+
+ volveraMateriales() {
+    this.router.navigate(['list_materiales']);
+  }
+  
 }
