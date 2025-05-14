@@ -65,42 +65,7 @@ export class AgregarMaterialesComponent {
    
   }
 
-  //funcion para subir la image de portada al servidor
-  /*subirArchivo(): void {
-    if (this.archivos.length === 0) return;
-
-    const formData = new FormData();
-    formData.append('archivo', this.archivos[0]);
-
-    this.materialServicio.subirImagen(formData).subscribe({
-      next: (urlImagen) => {
-        console.log('Imagen subida:', urlImagen);
-        this.material.imagen_portada = urlImagen.url; // guardar la URL devuelta por el backend
-      },
-      error: (err) => console.error('Error al subir la imagen', err)
-    });
-  }*/
-
-/*subirArchivo2(): void {
-  if (this.archivos.length === 0) return;
-
-  const archivo = this.archivos[0];
-  const formData = new FormData();
-  formData.append('archivo', archivo);
-
-  this.materialServicio.subirImagen(formData).subscribe({
-    next: (respuesta) => {
-      console.log('Imagen subida:', respuesta);
-
-      // Guardar solo el nombre del archivo, por ejemplo: "example.png"
-      this.material.imagen_portada = archivo.name;
-
-      // Opcional: Si también necesitas usar la ruta completa devuelta por el backend, guarda `respuesta.url`
-      // this.material.rutaCompletaImagen = respuesta.url;
-    },
-    error: (err) => console.error('Error al subir la imagen', err)
-  });
-}*/
+ 
 
 subirArchivo3(): void {
   if (this.archivos.length === 0) return;

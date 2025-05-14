@@ -15,6 +15,7 @@ import { ActualizarIdiomaComponent } from './actualizar-idioma/actualizar-idioma
 import { IdiomaDetallesComponent } from './idioma-detalles/idioma-detalles.component';
 import { ListaMaterialesComponent } from './lista-materiales/lista-materiales.component';
 import { AgregarMaterialesComponent } from './agregar-materiales/agregar-materiales.component';
+import { ActualizarMaterialesComponent } from './actualizar-materiales/actualizar-materiales.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,7 @@ const routes: Routes = [
       {path: 'details_idioma/:id', component: IdiomaDetallesComponent},
       {path: 'list_materiales',component:ListaMaterialesComponent},
       {path: 'add_material',component:AgregarMaterialesComponent},
+      {path: 'update_material/:id', component:ActualizarMaterialesComponent},
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]
   },

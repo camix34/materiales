@@ -23,6 +23,7 @@ import { IdiomaDetallesComponent } from './idioma-detalles/idioma-detalles.compo
 import { ListaMaterialesComponent } from './lista-materiales/lista-materiales.component';
 import { AgregarMaterialesComponent } from './agregar-materiales/agregar-materiales.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { ActualizarMaterialesComponent } from './actualizar-materiales/actualizar-materiales.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     IdiomaDetallesComponent,
     ListaMaterialesComponent,
     AgregarMaterialesComponent,
+    ActualizarMaterialesComponent,
   ],
   imports: [
     NgxPaginationModule,
