@@ -1,0 +1,24 @@
+<h2>Lista Empleados</h2>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>id</th>
+      <th>Idioma nombre</th>
+      <th>CodigoISO</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let idioma of idiomas">
+      <td>{{ idioma.id }}</td>
+      <td>{{ idioma.nombreIdioma }}</td>
+      <td>{{ idioma.codigoISO }}</td>
+        <td>
+            <button (click)="actualizarIdioma(idioma.id)" class="btn btn-info">actualizar</button>
+            <button (click)="eliminarIdioma(idioma.id)" class="btn btn-danger">Eliminar</button>
+            <button (click)="verDetallerIdioma(idioma.id)" class="btn btn-primary">Detalles</button>
+        </td>
+    </tr>
+  </tbody>
+
+</table>

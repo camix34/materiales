@@ -1,0 +1,54 @@
+
+<div class="container mt-3">
+    <!-- Buscador -->
+    <div class="input-group mb-3" style="width: 80%;">
+       
+           <h3>🔍</h3> 
+         
+        <input type="text"
+               class="form-control"
+               placeholder="Buscar por nombre o rol..."
+               [(ngModel)]="filtro"
+               (input)="usuariosFiltradosFunc()"
+               style="background-color: #f0f0f0;"    />
+      </div>
+
+    <!-- Tabla -->
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                
+                <th>Nombre Usuario</th>
+                <th>Rol</th>
+                <th>Acciones</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of usuariosPorPagina()">
+                
+                <td>{{ usuario.username }}</td>
+               
+                <td>
+                    <ul>
+                      <li *ngFor="let rol of usuario.roles">
+                        {{ rol.roleEnum }}
+                      </li>
+                    </ul>
+                  </td>
+                <td>
+                    <button type="button" (click)="verDetalles(usuario.id, usuario.username, usuario.roles[0].roleEnum)" class="btn btn-success"> <i class="fa-solid fa-eye" ></i>Ver</button>
+                    <button type="button" (click)="ActualizarUsuario(usuario.id, usuario.username, usuario.roles[0].roleEnum)" style="margin-left: 10px;" class="btn btn-info me-2">ACTUALIZAR</button>
+                    <button type="button" (click)="eliminarUsuario(usuario.id)"  class="btn btn-danger">BORRAR</button>
+                   
+                </td>
+            </tr>
+        </tbody>
+    </table>
+  <!-- Paginación -->
+<div class="pagination">
+    <button (click)="cambiarPagina(-1)" class="btn btn-info me-2" [disabled]="paginaActual === 0">Anterior </button>
+    <span> Página {{ paginaActual + 1 }} de {{ totalPaginas() }} </span>
+    <button (click)="cambiarPagina(1)" class="btn btn-info me-2" [disabled]="paginaActual === totalPaginas() - 1"> Siguiente </button>
+  </div>
+</div>
